@@ -106,7 +106,7 @@ public class HillCycleScript : MonoBehaviour
                 {
                     matrix[i] = 5 * rot[0][2 * i] + rot[0][(2 * i) + 1];
                 }
-                det = matrix[0] * matrix[3] - matrix[1] * matrix[2];
+                det = (matrix[0] * matrix[3] - matrix[1] * matrix[2]) % 26;
             }
             for(int i = 0; i < 2; i++)
             {
